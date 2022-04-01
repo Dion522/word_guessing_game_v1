@@ -15,9 +15,15 @@ const overlay = document.getElementById('overlay');
     const randomPhrase = Math.floor(Math.random() * phrases.length);
     const newPhrase = phrases[randomPhrase];
     const splitPhrase = newPhrase.split('');
-    return splitPhrase;
-    
-    
+    return splitPhrase;     
 
   } 
-  getRandomPhraseAsArray(phrases);
+
+  function addPhraseToDisplay (arr){
+      for(let i=0; i< arr.length; i+=1 );{
+    let item = document.createElement('li');
+      }
+
+  }
+  
+ 
