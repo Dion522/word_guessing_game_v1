@@ -11,9 +11,12 @@ const overlay = document.getElementById('overlay');
 
  const phrases =['This is the way', 'What you see is what you get', 'Hakuna Matata', 'Come what may', 'It is what I make of it'];
 
- function getRandomPhraseAsArray(phrases){
+ function getRandomPhraseAsArray(){
     const randomPhrase = Math.floor(Math.random() * phrases.length);
-    console.log(randomPhrase);
+    const newPhrase = phrases[randomPhrase];
+    const splitPhrase = newPhrase.split('');
+    return splitPhrase;
+    
     
 
   } 
