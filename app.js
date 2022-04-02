@@ -40,11 +40,11 @@ const ul = document.querySelector('#phrase ul');
   
  function checkLetter(button){
     const letter = document.querySelectorAll('.letter');
-    let match= null;
+    
     for(let i = 0; i < letter.length; i++){
         if(letter.textContent === button.textContent){
             letter[i].classList.add('show');
-            match =button.textContent;
+            
         }
     }
 
