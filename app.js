@@ -47,8 +47,9 @@ const ul = document.querySelector('#phrase ul');
             letter[i].classList.add('show');
             
         }if(letter.textContent === button.textContent){
-            Match = button.textContent;
+            match = button.textContent;
             return match;
+            
         }else{
             return noMatch;
         }
