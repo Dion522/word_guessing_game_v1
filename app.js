@@ -40,12 +40,22 @@ const ul = document.querySelector('#phrase ul');
   
  function checkLetter(button){
     const letter = document.querySelectorAll('.letter');
-    
+    let match= '';
+    let noMatch = null;
     for(let i = 0; i < letter.length; i++){
         if(letter.textContent === button.textContent){
             letter[i].classList.add('show');
             
+        }if(letter.textContent === button.textContent){
+            Match = button.textContent;
+            return match;
+        }else{
+            return noMatch;
         }
     }
 
- }
+ } 
+
+ qwerty.addEventListener('click', (e) =>{
+    let target = event.target;
+ });
