@@ -1,5 +1,5 @@
-const qwerty = document.querySelectorAll('qwerty');
-const phrase = document.querySelector('phrase');
+const qwerty = document.querySelector('#qwerty');
+const phrase = document.querySelector('#phrase');
 let missed = 0;
 const startGame = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
@@ -26,7 +26,7 @@ const ul = document.querySelector('#phrase ul');
       for(let i=0; i < arr.length; i++ ){
     let li = document.createElement('li');
     li.textContent = arr[i];
-    if(phrases[i] !== ' '){
+    if(arr[i] !== ' '){
         li.classList.add ('letter');
     }else {
         li.classList.add ('space');
@@ -81,13 +81,14 @@ qwerty.addEventListener('click', (e) =>{
         }
     }
 
+
     checkWin();
 
  });
 
 function checkWin(){
-    const letterClass = document.querySelector('.letter');
-    const showClass = document.querySelector('.show');
+    const letterClass = document.querySelectorAll('.letter');
+    const showClass = document.querySelectorAll('.show');
 
     if(letterClass.length === showClass.length){
         overlay.classList.add('win');
@@ -95,9 +96,9 @@ function checkWin(){
         overlay.style.display = 'flex'; 
 
 
-    }else {
+    }else if  (missed > 4){
         overlay.classList.add('lose');
-        document.querySelector('.title').textContent = " You Win!";
+        document.querySelector('.title').textContent = "You lose!";
         overlay.style.display = 'flex'; 
     }
 }
