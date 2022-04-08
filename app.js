@@ -45,27 +45,25 @@ const ul = document.querySelector('#phrase ul');
   //Function that checks if button clicked matches letter from phrase array.
  function checkLetter(button){
     const letter = document.querySelectorAll('.letter');
-    let match= '';
-    let noMatch = null;
+    let match = null;
     for(let i = 0; i < letter.length; i++){
-        if(letter.textContent === button.textContent){
+        if(letter === button.textContent){
             letter[i].classList.add('show');
             
-        }if(letter.textContent === button.textContent){
+        }if(letter === button.textContent){
             match = button.textContent;
-            return match;
-
-        }else{
-            return noMatch;
+        
+        
         }
     }
+    return match;
 
  } 
 //addEventListener that adds a class of "Chosen" to button so it can't be chosen twice and disables button.
 // If checkLetter functions returns null, remove one of the tries channge liveHeart to lostHeart.png 
 qwerty.addEventListener('click', (e) =>{
     let buttonChosen = e.target;
-    if(buttonChosen.tagName ==='button'){
+    if(buttonChosen.tagName ==='BUTTON'){
         buttonChosen.classList.add('chosen');
         buttonChosen.disable = true;
 
@@ -81,7 +79,7 @@ qwerty.addEventListener('click', (e) =>{
         }
     }
 
-
+    
     checkWin();
 
  });
