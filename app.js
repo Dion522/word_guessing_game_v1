@@ -47,14 +47,15 @@ const ul = document.querySelector('#phrase ul');
     const letter = document.querySelectorAll('.letter');
     let match = null;
     for(let i = 0; i < letter.length; i++){
-        if(letter[i] === button.textContent){
+        if(letter[i].textContent.toLocaleLowerCase() === button.textContent.toLocaleLowerCase()){
             letter[i].classList.add('show');
             match = button.textContent;
             
       
     }
-    return match;
+    
    }
+   return match;
  } 
 //addEventListener that adds a class of "Chosen" to button so it can't be chosen twice and disables button.
 // If checkLetter functions returns null, remove one of the tries channge liveHeart to lostHeart.png 
@@ -66,12 +67,11 @@ qwerty.addEventListener('click', (e) =>{
 
         let letterFound= checkLetter(buttonChosen);
 
-        if(letterFound = 'null'){
-            const removeTry = document.querySelector('.tries');
-            removeTry.remove();
+        if(letterFound = null){
+            const removeTry = document.querySelectorAll('.tries');
+            removeTry[missed].src="images/lostHeart.png"
             missed ++;
-            document.querySelector(".tries").src="images/lostHeart.png";
-            
+          
 
         }
     }
