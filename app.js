@@ -69,7 +69,7 @@ qwerty.addEventListener('click', (e) =>{
 
         if(letterFound = null){
             const removeTry = document.querySelectorAll('.tries');
-            removeTry[missed].src="images/lostHeart.png"
+            removeTry[missed].src="images/lostHeart.png";
             missed ++;
           
 
