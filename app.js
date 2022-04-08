@@ -47,17 +47,14 @@ const ul = document.querySelector('#phrase ul');
     const letter = document.querySelectorAll('.letter');
     let match = null;
     for(let i = 0; i < letter.length; i++){
-        if(letter === button.textContent){
+        if(letter[i] === button.textContent){
             letter[i].classList.add('show');
-            
-        }if(letter === button.textContent){
             match = button.textContent;
-        
-        
-        }
+            
+      
     }
     return match;
-
+   }
  } 
 //addEventListener that adds a class of "Chosen" to button so it can't be chosen twice and disables button.
 // If checkLetter functions returns null, remove one of the tries channge liveHeart to lostHeart.png 
