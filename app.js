@@ -67,8 +67,8 @@ qwerty.addEventListener('click', (e) =>{
 
         let letterFound= checkLetter(buttonChosen);
 
-        if(letterFound = null){
-            const removeTry = document.querySelectorAll('.tries');
+        if(letterFound === null){
+            const removeTry = document.querySelectorAll('img');
             removeTry[missed].src="images/lostHeart.png";
             missed ++;
           
