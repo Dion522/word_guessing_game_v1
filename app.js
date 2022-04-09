@@ -5,7 +5,7 @@ const startGame = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
 const ul = document.querySelector('#phrase ul');
 
-//Add a event listener to the “Start Game” button to hide the start screen overlay.
+//Add a event listener to the Start Game button to hide the start screen overlay.
     startGame.addEventListener('click', (e) =>{
     overlay.style.display ='none';
 });
