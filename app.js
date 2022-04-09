@@ -58,7 +58,7 @@ const ul = document.querySelector('#phrase ul');
    return match;
  } 
 //addEventListener that adds a class of "Chosen" to button so it can't be chosen twice and disables button.
-// If checkLetter functions returns null, remove one of the tries channge liveHeart to lostHeart.png 
+// If checkLetter functions returns null, remove one of the tries change liveHeart to lostHeart.png 
 qwerty.addEventListener('click', (e) =>{
     let buttonChosen = e.target;
     if(buttonChosen.tagName ==='BUTTON'){
