@@ -81,6 +81,7 @@ qwerty.addEventListener('click', (e) =>{
 
  });
 
+// checks if win or loose and shows appropriate display
 function checkWin(){
     const letterClass = document.querySelectorAll('.letter');
     const showClass = document.querySelectorAll('.show');
