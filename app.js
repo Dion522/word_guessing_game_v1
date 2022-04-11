@@ -61,17 +61,20 @@ const ul = document.querySelector('#phrase ul');
 // If checkLetter functions returns null, remove one of the tries change liveHeart to lostHeart.png 
 qwerty.addEventListener('click', (e) =>{
     let buttonChosen = e.target;
-    if(buttonChosen.tagName ==='BUTTON'){
+    if(buttonChosen.tagName ==='BUTTON' && !buttonChosen.classList.contains("chosen") ){
         buttonChosen.classList.add('chosen');
         buttonChosen.disable = true;
 
         let letterFound= checkLetter(buttonChosen);
 
         if(letterFound === null){
-            const removeTry = document.querySelectorAll('img');
+  
+            const removeTry = document.querySelectorAll('.tries img');
             removeTry[missed].src="images/lostHeart.png";
             missed ++;
-          
+            
+            
+            
 
         }
     }
